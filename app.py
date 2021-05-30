@@ -10,7 +10,7 @@ from flask import Flask, request, jsonify, render_template
 import pickle 
 
 app = Flask(__name__)
-model = pickle.load(open('random_forest_classification_model.pkl', 'rb'))
+model = pickle.load(open('random_forest_model.pkl', 'rb'))
 
 @app.route('/')
 def home():
