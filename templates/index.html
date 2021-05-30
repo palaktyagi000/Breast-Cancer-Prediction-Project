@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en", dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Breast Cancer Prediction</title>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+
+}
+
+body{
+    background-color: rgb(255, 245, 246);
+}
+
+h1{
+    color: brown;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.one{
+    color: rgb(68, 50, 50);
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 200;
+
+}
+
+.two{
+    margin-top: 30px;
+    text-align: left;
+    color: rgb(68, 50, 50);
+    font-family: 'Courier New', Courier, monospace;
+    font-style:italic;
+    
+}
+
+.button{
+  background-color:  rgb(68, 50, 50); /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+  
+  .button:hover {
+    background-color: brown; /* Green */
+    color: white;
+  }
+
+div {
+  border-radius: 5px;
+  padding: 20px;
+}
+</style>
+</head>
+
+
+<body>
+<div class='login'>
+<h1 id='topic'>Breast Cancer Prediction</h1>
+<p class=one>Breast cancer can occur in women and rarely in men.
+Symptoms of breast cancer include a lump in the breast, bloody discharge from the nipple and changes in the shape or texture of the nipple or breast.
+</p>
+<p class=two>Here are some features of lump which can predict that the person has cancer or not.<p>
+
+<form action="{{ url_for('predict')}}"method="post">
+  <input type="text" name="mean_radius" placeholder="Mean Radius" required='required' />
+  <input type="text" name="mean_texture" placeholder="Mean Texture" required='required' />
+  <input type="text" name="mean_perimeter" placeholder="Mean Perimeter" required='required' />
+  <input type="text" name="mean_area" placeholder="Mean Area" required='required' />
+  <input type="text" name="mean_smoothness" placeholder="Mean Smoothness" required='required' />
+
+<button type="submit" class="button">Predict</button>
+
+</form>
+
+<br>
+<br>
+{{prediction_text}}
+
+</div>
+
+
+
+</body>
+</html>
