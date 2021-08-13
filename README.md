@@ -4,6 +4,6 @@ I used Random Forest Classifier for this Project and deploy it using flask.
 Dataset is taken from kaggle.
 
 Here is Web application:
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/palaktyagi000/Breast-Cancer-Prediction-Project.git/App.png.jpg?raw=true)
 
 
